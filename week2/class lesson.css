@@ -1,0 +1,40 @@
+*{
+    color: hotpink;
+    background-color: rgb(229, 232, 240);
+}
+#info-paragraph{
+    color: purple
+
+}
+p{
+    color: blue;
+}
+.blue{
+    color: cadetblue;
+}
+h1{
+   font-size: 2rem; /* better use rem rather than px, rem will scale up, px will keep the same */
+    color: black;
+}
+ol{
+    width: 30rem;
+}
+li{
+    width: 50%;
+}
+.bold{
+    font-weight: bold;
+}
+
+#info-paragraph,
+li{
+    border: 0.5rem solid red;
+}
+/* 
+learning how to colour paragraph, certain bits and creating borders.
+remember that the last code is the end result
+*/
+section{
+    text-align: center;
+    border: 0.25rem dashed;
+}
