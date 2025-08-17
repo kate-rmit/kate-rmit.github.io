@@ -1,0 +1,102 @@
+body{
+    font-family: Cormorant Garamond;
+    font-weight: 700;
+    color: rgb(151, 128, 111);
+    justify-content: center;
+}
+
+li{
+    font-style: italic;
+    
+}
+:root{
+--clr-accent: red;}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* infinite wrapper
+utube url:https://youtu.be/SgmNxE9lWcY?si=4Ag8u9knxfaiBFz7
+*/
+.wrapper{
+    border: 1px solid black;
+    width: 90%;
+    height: 100px;
+    max-width: 1536px;
+    margin-top: 5rem;
+    margin-inline: auto;
+    position: relative;
+
+}
+
+
+.item{
+    width: 200px;
+    height: 100px;
+    background-color: gold;
+    border-radius: 6px;
+    position: absolute;
+    left: 100%;
+    animation-name: scrollLeft;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scrollLeft {
+    to {
+      left: -200px;
+    } }
+
+
+
+
+
+    .button{
+    width: 7.5rem;
+    height: 2.5rem;
+    font-family: garamond;
+    font-weight: 550;
+    color: var(--clr-accent);
+    /* need to clarify --clr-accent in root */
+    border: 10px white;
+    border-radius: 5px;
+    
+
+transition: transform 0.3s ease-in-out;
+
+    /* transition-property: transform ;
+    transition-duration: 0.3s;
+    -o-transition-timing-function: ease-in-out;
+    -o-transition-delay: ; */
+}
+
+.button:hover {
+color: rgb(8, 224, 37) ;
+transform: translateY(-10px);
+
+}
+
+
+/* 
+circle with gradient, dk how to add noise
+
+.element{
+    --lines: 0,00rem;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50rem;
+    justify-content: center;
+    background: radial-gradient(circle at 30% 90%, rgb(255, 98, 0), rgba(0,0,0,0));
+    mask: repeat radial gradient(circle at center,
+     #000, 
+    var(--lines),
+    #000,0,#0000,
+     calc( var (--lines) * 2),
+     #000);
+
+     -> var(--lines) need clarification (prob)
+} */
+

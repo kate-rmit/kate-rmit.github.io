@@ -1,0 +1,56 @@
+body{
+    font-family: static;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 162, 75);
+    width: auto;
+    height: 5000px;
+    justify-content: center;
+}
+/* heading part */
+.grid1{
+    justify-content: center;
+    display: grid;
+    grid-template-columns:  repeat(3, 25rem); 
+    grid-template-rows: auto 53px 150px ;
+}
+/* row 1 was 100px but text was 140 px -> weird spacing problem, text allign in the middle of the collumn */
+
+.item1{
+    font-size: 200px;
+    font-weight: 100;
+    font-style: italic;
+    grid-column:3 ;
+    grid-row:1 ;
+    text-align: right;
+    justify-self: end;  
+}
+.item2{
+    grid-area: 2/3;
+
+    text-align: right;
+    line-height: 0;
+}
+
+.item3{
+    border-style: solid;
+    border-radius: 60px;
+    width: 280px;
+    height: 120px;
+    text-align: center;
+grid-area: 3/3;
+justify-self: end;
+align-self: flex-end;
+font-size: 70px;
+}
+
+/* .rec1{
+    width: 50px;
+    height: 50px;
+    color: blue;
+    border-color: black;
+} */
+
+.item4{
+grid-area: 3/1;
+
+}
