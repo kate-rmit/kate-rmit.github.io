@@ -1,7 +1,13 @@
+:root{
+   --clr-background:rgb(255,164,65) ;
+   --clr-font: rgb(4,4,4);
+/* utube tut: https://www.youtube.com/watch?v=5wLrz_zUwoU */
+}
+
 body{
     font-family: static;
-    color: rgb(0, 0, 0);
-    background-color: rgb(255, 162, 75);
+    color: var(--clr-font);
+    background-color: var(--clr-background);
     width: auto;
     height: 5000px;
     justify-content: center;
@@ -11,9 +17,10 @@ body{
     justify-content: center;
     display: grid;
     grid-template-columns:  repeat(3, 25rem); 
-    grid-template-rows: auto 53px 150px ;
+    grid-template-rows: 200px 200px 53px 150px ;
 }
-/* row 1 was 100px but text was 140 px -> weird spacing problem, text allign in the middle of the collumn */
+/* row 1 was 100px but text was 140 px -> weird spacing problem, 
+text allign in the middle of the collumn */
 
 .item1{
     font-size: 200px;
@@ -24,23 +31,55 @@ body{
     text-align: right;
     justify-self: end;  
 }
+
+/* I wanted to make the item 4 line match the top line
+of the "ENT1" letters, so i add another row for the "ENT1",
+rather than having "ASSIGNMENT1" as a full row. 
+but when put them of the same row -> not alligned 
+"ENT1" cant directly touch the row since its a text
+-> have item 4 match the 4 row */
+
+.item11{
+    font-size: 200px;
+    font-weight: 100;
+    font-style: italic;
+    grid-column:3 ;
+    grid-row:2 ;
+    text-align: right;
+    justify-self: end;  
+}
 .item2{
-    grid-area: 2/3;
+    grid-area: 3/3;
 
     text-align: right;
     line-height: 0;
 }
 
 .item3{
-    border-style: solid;
+    color: var(--clr-font);
+    border-style: solid ;
+    border-color: (--clr-font);
     border-radius: 60px;
     width: 280px;
     height: 120px;
     text-align: center;
-grid-area: 3/3;
+    line-height: 1.85;
+font-size: 70px;
+transition: 0.3s;
+}
+
+.item3:hover{
+    color: var(--clr-background);
+    background-color: var(--clr-font);
+    border-style: var(--clr-font);
+ 
+}
+
+a{
+grid-area: 4/3;
 justify-self: end;
 align-self: flex-end;
-font-size: 70px;
+text-decoration: none;
 }
 
 /* .rec1{
@@ -51,6 +90,138 @@ font-size: 70px;
 } */
 
 .item4{
-grid-area: 3/1;
+grid-area: 4/1;
+border-style: solid;
+border-radius: 60px;
+width: 680px;
+height: 335px;
+text-align: left;
+letter-spacing: 2rem;
+padding-top: 10px;
+padding-left: 35px;
+line-height: 80px;
+font-weight: 100;
+font-style: italic;
+font-size: 70px;
+
+align-self: end;
+
+background-image: url(asset/wave\ gif.gif);
+background-size: cover;
+-webkit-background-clip: text;
+color: transparent;
+mix-blend-mode: multiply;
 
 }
+
+/* grid 2 */
+
+.grid2{
+    padding-top: 300px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns:  repeat(2, 600px); 
+    grid-template-rows: repeat(8, 400px);
+    row-gap: 50px;
+    column-gap: 30px;
+}
+
+.images{
+    width: 700px;
+    grid-area: 1/1;
+    align-self: flex-end;
+}
+
+h2{
+    font-size: 30px;
+    line-height: 1;
+}
+
+
+.para1, .para2, .para3{
+grid-area: 1/2;
+}
+
+.para2{
+    align-self: flex-end;
+    padding-bottom: 50px;
+}
+
+.para3{
+    align-self: flex-end;
+    justify-items: ;
+    padding-bottom:
+}
+, .para4{
+    grid-area: 2/1;
+}
+
+.para5, .para6{
+    grid-area: 2/2;
+}
+
+.para7, .para8{
+    grid-area: 3/1;
+}
+
+.para9, .para10{
+    grid-area: 3/2;
+}
+
+.para11, .para12{
+    grid-area: 4/1;
+}
+
+.para13{
+    grid-area: 4/2;
+}
+
+
+/* 
+.slider{
+    border: solid;
+   
+    height: var(--height);
+}
+
+.slider.cat{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+img{
+    width: 200px;
+}
+ */
+
+
+/* .cat{
+    mix-blend-mode: darken;
+    width: 12px;
+    grid-area: 1/1;
+    align-self:flex-end;
+    justify-self: end;
+    display: fle;
+} */
+
+
+/* @keyframes autoBlur {
+    from{
+        filter: blur(40px);
+    }
+    to{
+        filter: blur(0px);
+    }
+} */
+
+/* .item41, .item42, .item43, .item44{
+    filter: blur(0px);
+}
+
+.item41, .item43, .item44 :hover{
+filter: blur(4px);
+transition: 1s;} */
+
+
+
