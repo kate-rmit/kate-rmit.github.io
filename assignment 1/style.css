@@ -166,7 +166,7 @@ or how the tutorial end product look like: https://youtu.be/pFtxR-O78sY?si=s-kYL
     justify-content: center;
     display: grid;
     grid-template-columns:  repeat(2, 600px); 
-    grid-template-rows: 650px 500px 450px 500px 470px  450px 440px;
+    grid-template-rows: 650px 500px 450px 500px 470px  450px 500px;
     row-gap: 50px;
     column-gap: 30px;
 }
