@@ -1,0 +1,46 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&amp;family=Space+Grotesk&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer=""></script>
+  </head>
+  <body data-new-gr-c-s-check-loaded="14.1250.0" data-gr-ext-installed="">
+    <!-- header greets user with a big heading and invite them to play -->
+    <header>
+      <p>Let's play</p>
+      <h1>
+        <span class="rock">ROCK,</span> <span class="paper">PAPER,</span>
+        <span class="scissors">SCISSORS</span>
+      </h1>
+    </header>
+    <!-- main is the section where the actual game is played  -->
+    <main class="outer">
+      <p>What's your pick?</p>
+      <!-- the inner div uses flex to arrange the three buttons side by side  -->
+      <section class="inner">
+        <!-- each choice button has corresponding image inside -->
+        <button id="rock-button" class="rock">
+          <img src="rock.png" alt="">
+        </button>
+
+        <button id="paper-button" class="paper">
+          <img src="paper.png" alt="">
+        </button>
+        <button id="scissors-button" class="scissors">
+          <img src="scissor.png" alt="">
+        </button>
+      </section>
+      <!-- we use the selection section to display user's and computer's choice to the user -->
+      <section id="selection"><p id="my-choice"> Your pick: <span class="scissors">SCISSORS </span> </p>
+  <p id="computer-choice"> Computer's pick: <span class="scissors"> SCISSORS</span></p></section>
+      <!-- We use the result section to display the winner  -->
+      <section id="result"><span class="tie">It's a tie! </span> </section>
+    </main>
+  
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
