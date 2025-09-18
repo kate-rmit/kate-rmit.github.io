@@ -1,21 +1,38 @@
-const video = document.querySelector("#custom-video-player");
-const playPauseBtn = document.querySelector("#play-pause-btn");
-const playPauseImg = document.querySelector("#play-pause-img");
-const progressBar = document.querySelector("#progress-bar-fill");
-video.removeAttribute("controls");
-// playPauseBtn.addEventListener("click", togglePlayPause);
-video.addEventListener("timeupdate", updateProgressBar);
-function togglePlayPause() {
-  if (video.paused || video.ended) {
-    video.play();
-    playPauseImg.src = "https://img.icons8.com/ios-glyphs/30/pause--v1.png";
-  } else {
-    video.pause();
-    playPauseImg.src = "https://img.icons8.com/ios-glyphs/30/play--v1.png";
+/*find elements want to interact
+*/
+const videoElement = document.querySelector("#mediaPlayer");
+const playPauseButton = document.querySelector("#playPauseButton");
+const timeline = document.querySelector("#timelineProgression");
+const playPause = document.querySelector("#playPause");
+videoElement.removeAttribute("controls");
+/*
+
+if not playing - click:begin the playback
+if playing- click:pause the playback
+
+feedback:
+toggle icon based on the playing state
+curser change on hover
+*/
+function plyPause(){
+  if(videoElement.paused || videoElement.ended){
+    videoElement.play();
+    playPauseButton.textContent = "℈";
+  } else{
+    videoElement.pause();
+     playPauseButton.textContent = "ℑ";
   }
 }
-function updateProgressBar() {
-  const value = (video.currentTime / video.duration) * 100;
-  progressBar.style.width = value + "%";
+
+playPauseButton.addEventListener("click", playPause)
+
+/*
+timeline behaviour
+*/
+function updateTimeline(){
+console.log(videoElement.currentTime);
+let timePercent = (videoElement.currentTime/ videoElement.duration);
+console.log(timePercent);
 }
-// Add other functionalities here
+
+videoElement.addEventListener("timeupdate", updateTimeline)
