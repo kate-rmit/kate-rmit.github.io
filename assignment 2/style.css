@@ -1,0 +1,104 @@
+
+body{
+    justify-content: center;
+overflow-x: hidden;
+}
+
+header{
+    background-color: black;
+   height: 5rem;
+}
+
+.album{
+    background-color: grey;
+    width: 25rem;
+    height: 25rem;
+    grid-row: 1;
+transition: transform 0.25s;
+overflow: visible;
+
+}
+
+.albumLine{
+    width: auto;
+    height: auto;
+    display: flex;
+    overflow-x: scroll;
+    background-color: red;
+
+ /* display: grid;
+ grid-template-columns: repeat(5,30rem);
+ grid-template-rows: ;
+ justify-content: center;
+ justify-items: center;
+ align-items: center; */
+}
+#album4{
+background-color: blue;
+}
+
+.albumGrid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-template-rows: 36rem;
+    grid-auto-flow:column;
+    grid-gap: 2rem;
+    padding-left: 2rem;
+    justify-items: center;
+    align-items: center;
+    flex:none;
+    
+    
+}
+
+.albumLine::-webkit-scrollbar{
+    display: none;
+}
+
+.albumWrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 7% auto;
+}
+
+#backBtn, #nextBtn{
+    width: 5rem;
+    cursor: pointer;
+    margin: 1rem;
+}
+
+.album:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+#album1{
+    position: relative;
+    display: inline-block;
+}
+
+.cover{
+    width: 18rem;
+    display: flex;
+    justify-self: center;
+    padding-top: 2rem;
+    position: absolute;
+}
+
+.vinyl{
+transform: translateY(-20%);
+}
+
+.text{
+    display: flex;
+    align-content: end;
+    justify-content: center;
+ 
+  
+}
+p{
+  vertical-align: bottom;
+}
