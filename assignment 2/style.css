@@ -1,32 +1,32 @@
 :root{
     --clr-background:rgb(97, 79, 196);
     --clr-stripe: rgba(243, 220, 180);
- --glow-rgb: 245 245 245;
-  
-  --light-gold-rgb: 249 181 51;
-  --dark-gold-rgb: 215 147 23;
-  
-  --primary-stripe-rgb: 230 230 230;
-  --secondary-stripe-rgb: 240 240 240;
 }
 body{
-    justify-content: center;
-overflow-x: hidden;
+justify-content: center;
+overflow: hidden;
+
 }
 
 header{
     background-color: black;
    height: 5rem;
 }
-
+/* i tried using vw instead of rem so that 
+the web would be more responsive, but the vinyl disk got squished */
 .album{
     /* background-color: grey; */
-    width: 22rem;
-    height: 25rem;
+    width: 14vw;
+    height: 14vw;
     grid-row: 1;
-transition: transform 0.25s;
+transition: transform 0.35s ease;
 overflow: visible;
 display: block;
+background-color: blue;
+position: relative;
+display: inline-block;
+top:3rem;
+/* margin-bottom: 0px ; */
 
 }
 
@@ -34,8 +34,8 @@ display: block;
     width: auto;
     height: auto;
     display: flex;
-    overflow-x: scroll;
-    /* background-color: red; */
+  /* background-color: red; */
+
  /* display: grid;
  grid-template-columns: repeat(5,30rem);
  grid-template-rows: ;
@@ -47,36 +47,24 @@ display: block;
 .albumGrid{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(6, auto);
+    grid-template-columns: repeat(5, auto);
     grid-template-rows: 36rem;
     grid-auto-flow:column;
-    grid-gap: 2rem;
+    grid-gap: 2vw;
     justify-items: center;
     align-items: center;
     flex:none;
+    margin-left: 2vw;
 }
 
 .albumLine::-webkit-scrollbar{
     display: none;
 }
 
-#backBtn, #nextBtn{
-    width: 5rem;
-    cursor: pointer;
-    margin: 1rem;
-    position: relative;
-  z-index: 5;
-}
-
 .album:hover{
     cursor: pointer;
     transform: scale(1.1);
     z-index: 10;
-}
-
-#album1{
-    position: relative;
-    display: inline-block;
 }
 
 .cover{
@@ -89,11 +77,15 @@ display: block;
 
 .vinyl{
 transform: translateY(-20%);
-height: 17rem;
-width: 17rem;
+height: 14vw;
+width: 17vw;
 transform-origin: center center;
-  z-index: 0;
+z-index: 0;
+transform-origin: 50% 50%;
+transition: transform 0.2s linear;
 }
+
+
 
 .coverText{
     position:relative;
@@ -105,14 +97,13 @@ transform-origin: center center;
 .text{
  /* background-color: yellow; */
  position: absolute;
- bottom: 5%;
- left: 25%;
+top: 100px;
+ font-size: 2vw;
+text-align: center;
+z-index: 30;
 }
 
-.album:hover .coverText{
-    transform: translateY(20%);
-}
-/* problem: when hover, the album cover move down, but when moving the poiter to the area 
+/* problem: when hover, the album cover move down, but when moving the pointer to the area 
 between the disk, there's a glitch problem that have the album cover
 move up and down repeatedly
 -> making the hover area the album */
@@ -122,25 +113,6 @@ move up and down repeatedly
   to { transform: rotate(360deg); }
 }
 
-.cursor-image{
-    z-index: 30;
-}
-
-
-#backgroundPattern{
-     background-image: url(asset/AdobeStock2.jpeg);
-  background-size: 10%;  
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0; 
-  translate: -50% 0%;
-  height: 100%;
-  width: 100%;
-  min-width: 242rem;
-  animation: pan 180s linear infinite;
-
-}
 /* utube tut:https://youtu.be/x872keruUWQ?si=yDWDQMw9ibYL1JLE */
 
 #stripLine{
@@ -169,25 +141,30 @@ move up and down repeatedly
     align-items: center;
     justify-content: center;
     margin: 5% auto;
- position: absolute;  
+    position: absolute;  
   z-index: 2;
-  left:2%
-}
+  left:4%;
 
-.sideHide{
-width:90rem;
-background-color: var(--clr-stripe);
-position:relative;
-z-index: 99999;
 }
 
 .square{
-    background-color: red;
+    /* background-color: red; */
     position: absolute;
     z-index: 99999999;
-    width:105rem ;
-    height: 45rem;
+    width:95vw ;
+    height: 100vw;
 overflow: hidden;
-left:6%;
+margin-left:1vw ;
+
+
+}
+
+.album:hover .text{
+  font-style:oblique;
+  background-color: yellow;
+}
+
+.album:hover .vinyl{
+transform: translateY(-10vw);
 
 }

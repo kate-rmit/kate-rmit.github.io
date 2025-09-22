@@ -1,52 +1,64 @@
-<html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- add the font family of your choice -->
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer=""></script>
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
 
-  <body>
-    <!-- page heading -->
- <header>
+  <title>Media Player Baseline</title>
+</head>
+<body>
+  
+  <!-- this is my page heading -->
+  <header>
     <h1>My Media Player</h1>
- </header>
- <!-- nav bar -->
- <nav>
+  </header>
+
+  <!-- this is my nav bar -->
+  <nav>
     <a>Home</a>
     <a>Media Player</a>
     <a>About</a>
     <a>Contact</a>
- </nav>
-<!-- main -->
-<main>
-    <!-- media player section -->
+  </nav>
+
+  <!-- this is my main -->
+  <main>
+    <!-- this is my media player section -->
     <section class="mediaPlayerSection">
-        <video id="mediaPlayer" width="1000" controls>
-            <source src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4" type="video/mp4">
-            This browser doesn't support the video element.
-        </video>
-         <div class="mediaPlayerControlContainer">
-            <button id="playPauseButton">
-                ℑ
-                <!-- ℈ -->
-            </button>
-            <progress id="timelineProgress" value="0" max="100"></progress>
-        </div>
+      <!-- media player source -->
+      <video id="mediaPlayer" controls autoplay muted="true">
+        <source id="mediaSource" src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4" type="video/mp4">
+        This browser doesn't support the video element.
+      </video>
+      <!-- media player controls -->
+      <div class="mediaPlayerControlContainer">
+        <button id="playPauseButton">
+          <img id="playPauseIcon" src="./assets/play-icon.png" alt="play icon">
+        </button>
+        <progress id="timelineProgress" max="100" value="0"></progress>
+        <!-- adding in a time feedback section : let users know how long the video is and its current time -->
+        <p class="timeContainer">
+          <span id="currentTimeFeedback">0:00</span>
+          /
+          <span id="totalTimeFeedback">4:30</span>
+        </p>
+      </div>
     </section>
+  </main>
 
-</main>
+  <!-- our footer contains our attributions -->
+  <footer>
+    <p>&copy; 2025 Media Player Website. All rights reserved.</p>
+    <a href="https://icons8.com/icon/59862/play">Play</a> icon by
+    <a href="https://icons8.com">Icons8</a>
+    <a href="https://icons8.com/icon/61012/pause">Pause</a> icon by
+    <a href="https://icons8.com">Icons8</a>
 
-<footer>
+  </footer>
 
-      <p>© 2024 Media Player Website. All rights reserved.</p>
-      <a href="https://icons8.com/icon/59862/play">Play</a> icon by
-      <a href="https://icons8.com">Icons8</a>
-      <a href="https://icons8.com/icon/61012/pause">Pause</a> icon by
-      <a href="https://icons8.com">Icons8</a>
-  
-</footer>
-
-</body></html>
+</body>
+</html>

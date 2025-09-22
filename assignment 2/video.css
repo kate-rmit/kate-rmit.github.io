@@ -1,0 +1,167 @@
+:root {
+  /* my colour palette is taken from https://lospec.com/palette-list/lava-gb */
+  /* it's called lava-gb by Aero */
+  /* 
+  I picked this colour palette as it relates to the colours in the video. Given my context
+  I wanted to create a cohesive match to the colours existing in the video. I've also tried
+  to use darker colours for most areas to make the video itself grab users attention.
+   */
+  --colour-01: #034d97;
+  --colour-02: #ff8e80;
+  --colour-03: #4a2480;
+  --colour-04: #c53a9d;
+  --border: solid #c53a9d 8px;
+}
+.grid2{
+    display: grid;
+    grid-template-columns: 40vw 60vw ;
+    grid-template-rows: 5rem auto auto;
+    justify-content:center;
+   
+}
+
+body{
+    overflow:hidden;
+}
+
+h1{
+  font-size: 2rem;
+}
+
+nav {
+  border: var(--border);
+  padding: 1rem;
+
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  /* border: var(--border); */
+  grid-row: 3;
+}
+
+main {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.mediaPlayerSection {
+  width: 44vw;
+ 
+}
+
+#mediaPlayer {
+  max-width: 100%;
+}
+
+.mediaPlayerControlContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+#playPauseButton{
+  padding: 1rem;
+  cursor: pointer;
+}
+
+#timelineProgress{
+  flex: 1;
+}
+ 
+.album{
+    width: 20vw;
+    height: 20vw;
+transition: transform 0.35s ease;
+/* background-color: blue; */
+position: relative;
+display: block;
+    grid-column:1 ;
+    grid-row: 3; 
+    justify-self: center;
+    align-self: end;
+   transform: translateX(-1rem);
+}
+
+.cover{
+    width: 18rem;
+    display: flex;
+    justify-self: center;
+    padding-top: 2rem;
+    position: absolute;
+}
+
+.vinyl{
+transform: translateY(-20%);
+height: rem;
+width: 15rem;
+transform-origin: center center;
+z-index: 0;
+transform-origin: 50% 50%;
+transition: transform 0.2s linear;
+}
+
+.coverText{
+    position:relative;
+    /* background-color: orange; */
+    height: 25rem;
+    z-index: 1;
+}
+
+.text{
+ /* background-color: yellow; */
+ position: relative;
+top: 10em;
+ font-size: 2vw;
+text-align: center;
+z-index: 30;
+}
+
+.album:hover .vinyl{
+ transform: translateY(-10vw)
+}
+
+#disk2{
+    transition: transform 0.25s linear ease;
+}
+.album:hover #disk2{
+ transform: translateY(-18vw)
+ /* translateX(-5rem)
+ rotate(30deg) */
+}
+
+#disk2{
+    /* background-color: red; */
+    z-index: -1;
+}
+header {
+  grid-column: 1 / 3; 
+  grid-row: 1;
+}
+
+.mediaPlayerSection {
+  grid-column: 2;
+  grid-row: 3; 
+  align-self: start;
+  justify-self: start;
+
+}
+
+footer {
+  /* grid-column: 1 / 3;
+  grid-row: 4; */
+  align-items: end;
+}
+
+.infomation{
+    grid-column: 2;
+    grid-row: 2;
+    align-self: end;
+    font-size: clamp(1rem, 2vw, 2rem);
+}
