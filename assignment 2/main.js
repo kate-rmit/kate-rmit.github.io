@@ -3,16 +3,45 @@
  click on one, pernamently setting the album there
 timeline show up, showing time.
 */
-let scrollContainer = document.querySelector("albumWrap");
-let backBtn= document.getElementById("backBtn");
-let nextBtn= document.getElementById("nextBtn");
+const scrollContainer = document.getElementById("albumWrap");
+const backBtn= document.getElementById("backBtn");
+const nextBtn= document.getElementById("nextBtn");
 
-nextBtn.addEventListener("click", function(
-    scrollContainer +=900;
-));
+const SCROLL_AMOUNT = 900;
 
-// function nextSlide()
-// ;
-backBtn.addEventListener("click", () => {
-    scrollContainer.scrollLeft -=900;
-})
+nextBtn.addEventListener('click', () => {
+  scrollContainer.scrollBy({ left: SCROLL_AMOUNT, behavior: 'smooth' });
+});
+backBtn.addEventListener('click', () => {
+  scrollContainer.scrollBy({ left: -SCROLL_AMOUNT, behavior: 'smooth' });
+});
+
+scrollContainer.addEventListener('wheel', (evt) => {
+  evt.preventDefault();
+  scrollContainer.scrollLeft += evt.deltaY;  // or -= to invert
+}, { passive: false });
+// scrollContainer.addEventListener("wheel", (evt) => {
+//     evt.preventDefault();
+//     scrollContainer.scrollLeft += evt.deltaY;
+// })
+
+// nextBtn.addEventListener("click",  () => {
+//     scrollContainer.scrollBehavior + "smooth";
+//     scrollContainer.scrollLeft -=900;
+// })
+
+// backBtn.addEventListener("click", () => {
+//     scrollContainer.scrollLeft -=900;
+// })
+
+// const vinyl = document.getElementById("vinyl");
+// const coverText = document.getElementById("coverText");
+// const album1 = document.getElementById("album1");
+
+// album1.addEventListener("mouseover", function(){movingDisk})
+
+// function movingDisk(){
+// vinyl.classList.add(`spin`)
+// console.log("mouse enter")
+// }
+ 
