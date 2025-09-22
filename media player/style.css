@@ -1,4 +1,4 @@
-/* store my custom variable */
+/* store my custom variable
 :root{
 --colour-01: white;
 --colour-02: black;
@@ -63,4 +63,80 @@ padding:1rem;
 
 #timelineProgress{
     flex:1
+} */
+
+/* store my custom variables */
+:root {
+  /* my colour palette is taken from https://lospec.com/palette-list/lava-gb */
+  /* it's called lava-gb by Aero */
+  /* 
+  I picked this colour palette as it relates to the colours in the video. Given my context
+  I wanted to create a cohesive match to the colours existing in the video. I've also tried
+  to use darker colours for most areas to make the video itself grab users attention.
+   */
+  --colour-01: #051f39;
+  --colour-02: #ff8e80;
+  --colour-03: #4a2480;
+  --colour-04: #c53a9d;
+  --border: solid #c53a9d 8px;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  line-height: 1.6;
+  background-color: var(--colour-01);
+  color: var(--colour-02);
+}
+
+h1{
+  font-size: 2rem;
+}
+
+nav {
+  border: var(--border);
+  padding: 1rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: var(--border);
+}
+
+main {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.mediaPlayerSection {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#mediaPlayer {
+  max-width: 100%;
+}
+
+.mediaPlayerControlContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+#playPauseButton{
+  padding: 1rem;
+  cursor: pointer;
+}
+
+#timelineProgress{
+  flex: 1;
 }

@@ -1,40 +1,15 @@
-:root{
-    --clr-background:rgb(97, 79, 196);
-    --clr-stripe: rgba(243, 220, 180);
- --glow-rgb: 245 245 245;
-  
-  --light-gold-rgb: 249 181 51;
-  --dark-gold-rgb: 215 147 23;
-  
-  --primary-stripe-rgb: 230 230 230;
-  --secondary-stripe-rgb: 240 240 240;
-}
-
 #backgroundPattern{
      background-image: url(asset/AdobeStock2.jpeg);
   background-size: 10%;  
   position: absolute;
-  left: 50%;
-  top: 0px;
+  top: 0;
+  left: 0;
+  z-index: 0; 
   translate: -50% 0%;
-
   height: 100%;
   width: 100%;
-  min-width: 1200px;
+  min-width: 242rem;
   animation: pan 180s linear infinite;
-
-}
-/* utube tut:https://youtu.be/x872keruUWQ?si=yDWDQMw9ibYL1JLE */
-
-
-
-
-#stripLine{
-background-color: red;
-filter:blur(5px);
-height:100rem;
-z-index: 9999;
-width: 100rem;
 }
 
 @keyframes pan {
