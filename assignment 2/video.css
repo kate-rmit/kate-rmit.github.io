@@ -1,6 +1,7 @@
 :root {
   --colour-text: black;
   --colour-background: rgb(163, 105, 6);
+  --clr-stripe: rgba(243, 220, 180);
 }
 .grid2{
     display: grid;
@@ -8,13 +9,20 @@
     grid-template-rows: 5vw 4vw 29vw;
     justify-content:center;
    overflow:visible;
-} 
-
+}
 body{
     overflow:hidden;
     background-color: var(--colour-background);
 }
 
+/* after watching some youtube video about interactivities in web design, I saw that 
+many people advised changing the unit of measurement to vw and rem so that the web
+would scale when making the web bigger or smaller. This was also your advice for me 
+in the last assignment, so I was really interested in trying it out
+I mostly coded on my laptop, so for the most part I didnt have any issues with the 
+interactivities, but when I switched into the mac wacom in the school, the web
+layout are distorded whenever I scale the web page, which was quite shocking for me haha
+  */
 footer {
   display: flex;
   flex-direction: row;
@@ -82,7 +90,13 @@ main {
   flex: 1;
 }
 
-/* at */
+/* at first, I wanted to make the disks move up when hover on the album, and each
+disk would spin when the mouse is hover directly on top of it. But I felt like
+this isn't that much different from the index page before, and I wanted to make the
+experience feel new in each section, so i tried another interaction instead */
+
+
+
 /*  .album{
     width:40rem;
     height: 40rem;
@@ -151,7 +165,26 @@ color: rgb(209, 8, 8);
 font-size: 1rem;
 margin-bottom: 0.5rem;
 text-decoration: none;
+font-family: Yuji Syuku;
 }
+/* the vibe is so early 2000s, which is what I wanted, but it still unbelievable cringy */
+.name{
+  font-size: 1rem;
+
+}
+
+/* #stripLine{
+ position: absolute;
+  top: 19%;
+  left: 0;
+  width: 100%;
+  height: 34rem;
+  background-color: var(--clr-stripe);
+  filter: blur(30px);
+  opacity:60%;
+  z-index: 0;
+  mix-blend-mode:;
+} */
 .cover{
     width: 18rem;
     display: flex;
@@ -191,6 +224,8 @@ footer {
   font-weight: 1000;
 }
 
+/* I wanted the vinyl to spin and have the image of the music cover appeared when hovered
+on the vinyl disk */
 .backgroundIMG {
   width: inherit;
   height: inherit;
@@ -223,6 +258,12 @@ change hover:opacity from 1=>0.8 so the image is more visible */
 animation: spin 10s ease-in-out infinite;
 }
 
+
+/* at first, i planned to have the turntable handle also move on top of the disk
+when hover on the vinyl, but i decided otherwise since that would made the website 
+have too much happening at the same time, distracting the user from the focus of 
+enjoying music. Another reason was because of the animation, since I didn't want the 
+handle to constancely move around every time I hover on top of it */
 .turntable{
   grid-column: 1;
   grid-row: 2;
@@ -232,6 +273,15 @@ animation: spin 10s ease-in-out infinite;
   z-index: 2;
 }
 
+/* i want 60s aesthetic cottagecore, so i tried making the website look more busy,
+making it have a maximilism vibe. I tried putting a lace overlay ontop of the player
+so the lace act as the frame to the video.
+this might be due to a different in computer setting but the colour display of the lace on
+my computer(window) and the school computer(mac) is very different,
+which is very interesting to me. the frame on the mac is white but when i screenshot it, it
+is black instead, similar to the window display. This might be a problem of different
+browser instead, since i had to use safari on the mac
+*/
 .frame{
 height: 27vw;
 width:44vw;

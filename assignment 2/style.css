@@ -1,13 +1,13 @@
 :root{
-    --clr-text:rgba(254, 21, 21, 0.877);
-    --clr-artist: rgba(88, 110, 209, 0.427);
-    --clr-stripe: rgba(243, 220, 180);
+    --clr-text:rgba(255, 255, 255, 0.877);
+    --clr-artist: rgba(50, 52, 64, 0.696);
+    --clr-stripe: rgb(245, 189, 99);
 }
 body{
 justify-content: center;
 overflow: hidden;
 }
-
+/* problem: the header and footer doesn't go all the way to both side of the page */
 footer {
   display: flex;
   flex-direction: row;
@@ -34,7 +34,6 @@ transform: translateY(33vw);
 }
 
 header{
-  
    height: 5rem;
 }
 /* i tried using vw instead of rem so that 
@@ -51,9 +50,13 @@ display: block;
 position: relative;
 display: inline-block;
 top:3rem;
-/* margin-bottom: 0px ; */
-
 }
+
+/* at first, i tried making it an gallery, having arrow so that it would move to the 
+next row when pressed but I failed. This might have to do with the fact the
+tutorial I watch is only for images and I had way too many divs than I needed.
+When I tried this, there was also problems with spacing, which was bugging me out.
+*/
 
 .albumLine{
     width: auto;
@@ -120,7 +123,7 @@ transition: transform 0.2s linear;
 }
 
 .text{
- background-color: var(--clr-artist);
+ /* background-color: var(--clr-artist); */
  filter: blur(30%);
  position: absolute;
 top: 100px;
@@ -143,17 +146,21 @@ move up and down repeatedly
 
 /* utube tut:https://youtu.be/x872keruUWQ?si=yDWDQMw9ibYL1JLE */
 
+
+/* I wanted the album to stand out more so I added an opaque underlayer with 
+the same value of the body background colour  */
 #stripLine{
  position: absolute;
   top: 19%;
   left: 0;
   width: 100%;
-  height: 38rem;
+  height: 28rem;
+  transform: translateY(60%);
   background-color: var(--clr-stripe);
-  filter: blur(30px);
+  filter: blur(70px);
   opacity:60%;
-  z-index: 1;
-  mix-blend-mode:;
+  z-index: 0;
+  mix-blend-mode: darken;
 }
 
 @keyframes pan {
@@ -186,21 +193,38 @@ overflow: hidden;
 margin-left:1vw ;
 padding-bottom: 4vw;
 }
-
+/* at first, I wanted to have the artist image and name to pop out when hover
+on top of the album like how an alt text of an image appeared, which I though was
+possible with css. To my dismay, it isn't (or I'm just illiterate). So I tried
+and found some tutorials that have the image appeared in the background instead, 
+which wasn't what i wanted since the background of my web page is already very busy,
+and this also involved javascript, since the image would appear in calculation of the position
+of the mouse, something that I understand in theory but not in practice. */
 .album:hover .text{
   font-style:oblique;
-  background-color: ;
+  background-color: var(--clr-artist);
   opacity: 1;
 }
-
 .artist{
   opacity:0;
   transition: 0.25s ease-in-out;
+  filter:saturate(2);
 }
 .album:hover .artist{
   opacity:1
 }
 .album:hover .vinyl{
 transform: translateY(-10vw);
+}
 
+#tittle{
+  z-index: 10;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 10rem;
+  /* background-color: red; */
+  transform: translate(30%, -50%);
+  font-size: 10rem;
 }
