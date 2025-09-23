@@ -8,37 +8,34 @@
     <link rel="stylesheet" href="video.css">
     <script src="video.js" defer=""></script>
 </head>
-
 <body>
-    <div id="backgroundPattern" ></div>
-
     <section class="grid2">
-
-  <header>
-    <nav>
-    <a>Home</a>
-    <a>Media Player</a>
-    <a>About</a>
-    <a>Contact</a>
+      <div id="backgroundPattern"></div>
+      <!-- <img src="asset/AdobeStock6.png" class="header" alt=""> -->
+    <nav id="pattern">
+    <a  class="textColor">Home</a>
+    <a  class="textColor">Media Player</a>
+    <a  class="textColor">About</a>
+    <a  class="textColor">Contact</a>
   </nav>
-  </header>
+ 
+  <!-- <div class="backgroundPattern">kasjdhfajksdhf</div> -->
 
+  <img src="asset/turntable.png" class="turntable" alt="">
+<div class="dDisk">
+<img src="asset/vinyl.png" class="" id="backgroundIMG" alt="">
+<img src="asset/epic.png" class="clipped" > 
 
-
-    <div class="album" id="album1"> 
-<img src="asset/vinyl.png" class="cover vinyl" id="disk1" alt="">
-<img src="asset/vinyl.png" class="cover vinyl" id="disk2" alt="">
- <div class="coverText" alt="">
-    <img src="asset/epic.png" class="cover" >
 </div>
-</div>
-<!-- artist name -->
 <section class="infomation">
    <p>Artist name: Jorge Rivera-Herrans</p> 
    <p>Publish date: </p>
 </section>
-    <!-- this is my media player section -->
+ <img src="asset/AdobeStock4.png" class="frame" alt="">
+  <img src="asset/AdobeStock4.png" class="frame2" alt="">
+    <!-- media player section -->
     <section class="mediaPlayerSection">
+     
       <!-- media player source -->
       <video id="mediaPlayer" controls autoplay muted="true">
         <source id="mediaSource" src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4" type="video/mp4">
@@ -54,9 +51,9 @@
         <progress id="timelineProgress" max="100" value="0"></progress>
         <!-- adding in a time feedback section : let users know how long the video is and its current time -->
         <p class="timeContainer">
-          <span id="currentTimeFeedback">0:00</span>
+          <span   id="currentTimeFeedback">0:00</span>
           /
-          <span id="totalTimeFeedback">4:30</span>
+          <span   id="totalTimeFeedback">4:30</span>
         </p>
       </div>
     </section>
@@ -64,13 +61,14 @@
 </section>
 
   <!-- our footer contains our attributions -->
-  <footer>
-    <p>&copy; 2025 Media Player Website. All rights reserved.</p>
-    <a href="https://icons8.com/icon/59862/play">Play</a> icon by
-    <a href="https://icons8.com">Icons8</a>
-    <a href="https://icons8.com/icon/61012/pause">Pause</a> icon by
-    <a href="https://icons8.com">Icons8</a>
-
+  <footer  id="pattern">
+    <p >&copy; 2025 Media Player Website. All rights reserved.</p>
+    <a href="https://icons8.com/icon/59862/play" class="textFooter">Play</a> 
+    <a href="https://icons8.com"  class="textFooter">Icons8</a>
+    <a href="https://icons8.com/icon/61012/pause"  class="textFooter">Pause</a>
+    <a href="https://icons8.com"  class="textFooter">Icons8</a>
+    <a href="https://www.vecteezy.com/free-png/vinyl-record"  class="textFooter">Vinyl Record PNGs by Vecteezy</a>
+    <a href="https://www.instagram.com/artofzwist/?hl=en"  class="textFooter">Epic art by ZWIST</a>
   </footer>
 
 </body>

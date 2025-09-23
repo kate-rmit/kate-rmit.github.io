@@ -37,12 +37,12 @@ cursor change on hover
 function playPause(){
   if(videoElement.paused || videoElement.ended){
     videoElement.play();
-    playPauseIcon.src = "./assets/pause-icon.png";
-    playPauseIcon.alt = "pause icon";
+    playPauseIcon.src = ".asset/asset/play.icon";
+    playPauseIcon.alt = ".asset/asset/pause-icon";
   } else {
     videoElement.pause();
     playPauseIcon.src = "./assets/play-icon.png";
-    playPauseIcon.alt = "play icon";
+    playPauseIcon.alt = ".asset/asset/pause-iconn";
   }
 }
 
