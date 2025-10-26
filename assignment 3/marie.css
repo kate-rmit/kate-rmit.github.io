@@ -1,0 +1,56 @@
+/* marie's section */
+.guillotine{
+background-color: red;
+height: 30vh;
+position: sticky;
+top: 0;
+z-index:0;
+}
+
+.mariel{
+    position: sticky;
+    top: 0;
+    top: 100px;
+    z-index: 10;
+}
+
+#head{
+    width: 30rem;
+    display: flex;
+    justify-self: center;
+}
+
+.cake{
+    bottom: 0;
+    width: 40rem;
+    z-index: 4;
+}
+
+.cherry{
+    width: 46rem;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    transform: translate(-50px, -80px) rotate(45deg);
+}
+
+.mask{
+    position: fixed;
+    top:0;
+    left:0;
+    height: 100vh;
+    width: 100%;
+   background-image: url(asset/blood\ drop.gif);
+   background-size: cover;
+   background-position: center;
+   z-index: -1;
+   mix-blend-mode: multiply;
+}
+
+.wealthGap{
+    background-color: orange;
+    height: 90rem;
+    width: 100%;
+}
+
+/* link: https://www.vecteezy.com/video/3329854-ink-drops-spread-over-a-wet-surface */

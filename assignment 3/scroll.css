@@ -1,0 +1,41 @@
+.sticky_parent{
+    height: 1000vh;
+    z-index: 99;
+    position: relative;
+}
+
+.sticky{
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    border: 1px solid red;
+}
+
+.scroll_section{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 1000vw;
+    /* the vw need to be the same amount as the sticky_parent vh for this to work */
+    will-change: transform;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 0 5vw;
+}
+
+
+.autoRotate{
+    animation: autoRotateAnimation;
+    animation-timeline: view(50%);
+}
+
+@keyframes autoRotateAnimation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
