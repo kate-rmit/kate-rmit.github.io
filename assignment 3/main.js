@@ -17,3 +17,7 @@ function transform(section) {
 }
 
 // youtube tutorial: https://youtu.be/yXnK8ND76z8?si=Z2UHInG4Bw5pk3Jq
+
+window.addEventListener('click', () =>{
+  document.getElementById("song").play();
+});

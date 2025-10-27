@@ -9,7 +9,7 @@
     position: sticky;
     top: 0;
     height: 100vh;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .scroll_section{
@@ -28,7 +28,7 @@
 
 .autoRotate{
     animation: autoRotateAnimation;
-    animation-timeline: view(50%);
+    animation-timeline: view(90%);
 }
 
 @keyframes autoRotateAnimation{
