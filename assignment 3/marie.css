@@ -98,9 +98,13 @@ a{
 .music{
   position: absolute;
   color: black;
-  transform: translate(53rem, 21rem);
+  width: 100%;
+
+  transform: translateY( 21rem);
   /* font-family: Monsieur La Doulaise; */
   font-size: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
 .section_container {
