@@ -90,6 +90,9 @@ a{
   text-decoration: none;
 }
 
+#colorNav{
+  color: black;
+}
 .music{
   position: absolute;
   color: black;
@@ -133,8 +136,10 @@ transform: translate(25rem);
 .sharpGui{
     top: 0;
     width: 60rem;
-    transform: translate(27rem, -60rem);
+    transform: translate(20rem, -60rem);
  position: absolute;
+   display: flex;
+    justify-self: center;
  transition: top 0.1s ease-out;
 
 }
