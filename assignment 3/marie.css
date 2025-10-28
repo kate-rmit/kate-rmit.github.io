@@ -1,33 +1,31 @@
 /* marie's section */
-.guillotine{
-background-color: red;
-height: 30vh;
-position: sticky;
-top: 0;
-z-index:9; 
-}
 
 .mariel{
     position: sticky;
     top: 0;
-    top: ;
     z-index: 10;
-      transform: translateY(15rem);
+    transform: translateY(19rem);
 }
 
+.speck{
+  height: 9rem;
+  width: 100%;
+}
 #head{
     width: 30rem;
     display: flex;
     justify-self: center;
-  
 }
 
 .cake{
-    bottom: 0;
-    width: 70rem;
-    z-index: 4;
-    transform: translateY();
-}
+  width: 50rem;
+  max-width: 100%;
+  height: auto;
+  display: block;
+    z-index: 10;
+    position: absolute;
+    transform: translate(-83rem, -26rem);
+  }
 
 .cherry{
     position: sticky;
@@ -35,7 +33,7 @@ z-index:9;
     bottom: 300rem;
     width: 35rem;
     z-index: 99;
-    transform: rotate(45deg) translateX(9rem);
+    transform: rotate(45deg) translateY(-25rem);
 }
 
 .mask{
@@ -53,6 +51,9 @@ z-index:9;
    z-index: -3;
 }
 
+/* I also wanted to have the gif started playing only when I have scrolled
+to this section on the screen, but this was quite hard to do.
+I did looked into Intersection Observer */
 
 
 .wealthGap{
@@ -61,15 +62,53 @@ z-index:9;
     width: 100%;
 }
 
+.drapes{
+  background-image: url(asset/frame.jpg);
+   position: fixed;
+    top:0;
+    left:0;
+    height: 20rem;
+    width: 100%;
+   background-image: url(asset/frame.jpg);
+    background-size: cover; 
+   background-position: center; 
+   z-index: 10;
+}
+
+.over{
+  position: absolute;
+  z-index: 20;
+  display: flex;
+  justify-content: space-around;
+  align-content:end;
+  width: 100%;
+}
+
+a{
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.music{
+  position: absolute;
+  color: black;
+  transform: translate(53rem, 21rem);
+  /* font-family: Monsieur La Doulaise; */
+  font-size: 30px;
+}
+
 .section_container {
 height: 100%;
 width: 100%;
 background-color: transparent;
-position: absolute;
+position: sticky;
 Left: 0;
-top: 0;
+bottom: 0;
+bottom:50rem;
 -webkit-clip-path: inset(0px 0px 0px 0px);
 clip-path: inset (0px 0px 0px 0px);
+z-index:99;
 }
 
 .section_inner {
@@ -78,16 +117,12 @@ inset: 0%;
 bottom: 0;
 height: 100%;
 width: 100%;
-transform: translate(580px);
-}
-
-.inner{
-    
+transform: translate(25rem);
 }
 
 .baseGui{
     top: 0;
-    width: 80rem;
+    width: 65rem;
     overflow: none;
     display: flex;
     justify-self: center;
@@ -97,7 +132,15 @@ transform: translate(580px);
 
 .sharpGui{
     top: 0;
-    transform: translate(32rem, -55rem);
+    width: 60rem;
+    transform: translate(27rem, -60rem);
  position: absolute;
+ transition: top 0.1s ease-out;
+
 }
+
+.sharpGui.scrolled {
+  top: 22rem;
+}
+
 

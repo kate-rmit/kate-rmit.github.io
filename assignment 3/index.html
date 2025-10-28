@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marie Antoinette</title>
     <link rel="icon" href="asset/android-chrome-192x192.png">
-
+<link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="marie.css">
 <link rel="stylesheet" href="scroll.css">
@@ -23,21 +26,32 @@
             <a  class="textColor">Contact</a>
         </nav>
     </div>
-   
+   <!-- As they begin to scroll, the guillotine blade descends and beheads Marie, marking the start of the narrative.
+     The scrolling then transitions from vertical to horizontal, where her severed head spins and moves across the screen as
+      information about the Revolution appears.
+      This section becomes the main focus of engagement, combining motion, text, and visuals to reveal historical context. 
+      The scrolling action itself is the most common and meaningful interaction, allowing the audience to control the pace and flow of the story. 
+      The primary goal is to help users learn about the Revolution in a more active and memorable way, using animation and symbolism instead of static text. 
+      The falling blade, spinning head, and final image of the head resting on a cake communicate both the chaos of the Revolution 
+      and the irony of Marie Antoinette’s legacy. -->
     <div>
-        <h1 class="tittle">French Revolution</h1>
+        <h1 class="tittle" id="french">French </h1>
+          <h1 class="tittle" id="revolution">Revolution</h1>
     </div>
 
-    <!-- this is Marie Antoinette -->
-     <!-- <div class="guillotine"></div> -->
-
+<!-- The audience immediately notices the guillotine and Marie Antoinette’s head beneath it. 
+ The scene creates tension and danger, making the website’s content clear that it’s about execution and revolution. 
+ It blends tension and dark humor, creating a sense of unease and curiosity while keeping the topic engaging. -->
 
         <div ><img class="baseGui" src="asset/guillotine 1.png" alt=""></div>
-        <div ><img class="sharpGui" src="asset/guillotine 2.png" alt=""></div>
+        <div ><img class="sharpGui" src="asset/guillotine 2.1" alt=""></div>
+        <div class="music">Click to play music</div>
 <audio id="song">
     <source src="asset/audio.mp4">
 </audio>
- 
+ <!-- The transition between vertical and horizontal scrolling may briefly confuse users, but it also emphasizes a shift in narrative space. 
+  Going from a first person view (action based, participating in a historical event) to a more third person view (seeing history events more passively, only receiving information). -->
+<div class="speck"></div>
     <div class="mariel">
          <div class="marie">
             <img class="autoRotate" id="head" src="asset/marie's head.png" alt="Marie Antoinette's head">
@@ -45,9 +59,12 @@
     </div>
 
     </div>
-    </div>
 
  <section class="vertical"></section>
+
+<!-- The imagery of the French Revolution is overlaid with a GIF of ink dripping down the screen, symbolizing the bloodshed of the era while adding a visually engaging effect. 
+ I intended for the GIF to play only upon scrolling to the section, but was unable to implement this. 
+ In future iterations, I plan to revisit and refine this interaction. -->
 
 <!-- information section -->
  <section>
@@ -55,8 +72,8 @@
 <div class="sticky_parent">
     <div class="sticky">
         <div class="scroll_section">
-<div class="blood"></div>
-<div>
+<!--  Horizontal scrolling guides users through events chronologically, creating a sense of “moving through history.” -->
+ <div>
     <p>Marie Antoinette, the Queen of France, was executed by guillotine on October 16, 1793, during the French Revolution.</p>
 </div>
 <div>
@@ -77,27 +94,40 @@
 </div>
 </div>
 </section>
-
+<!-- The choice of transitioning Marie’s head to a cherry on top of a cake is a re-called to the famous iconic quote “Let them eat cake”. 
+ Even though this quote had been proven to be untrue, it remains deeply ingrained in popular culture as a symbol of her perceived ignorance and detachment from the common people. 
+ By referencing it visually, the design reinforces the irony of her public image and connects the historical narrative with the modern viewer’s collective memory. -->
 <br>
 <br>
 <!-- section of falling head on cake -->
  <div class="wealthGap"></div>
+
 <section class="wrapper">
  <section class="space">
-    
      <div class="section_container">
         <div class="section_inner">
-    <div class="inner"><img class="cherry" src="asset/cherry.png" alt=""></div>
-  </div>
- </div>
-    <div><img class="cake" src="asset/cake.png" alt=""></div>
+             <div class="inner" id="f"><img class="cherry" src="asset/cherry.png" alt=""></div>
+         </div>  
+</div>
+             <div class="image_container"><img class="cake" src="asset/cake half.png" alt=""></div>
+
  </section>
  </section>
 </main>
-<div class="banner"></div>
+<!-- most of the images are editted in Photoshop before being put inside the website -->
 
+<!-- A de-saturated pop-art or halftone comic style is used to balance historical gravity with modern visual appeal, since if its too simple it would take away the immersion of the audience.  -->
 <footer>
-    <a href=""></a>
+    
+    <div class="over">
+  <a >All rights reserved:</a>
+    <a href="https://sco.wikipedia.org/wiki/French_Revolution">Image: Wiki </a>
+    <a href="https://www.vecteezy.com/video/3329854-ink-drops-spread-over-a-wet-surface">Gif: Vecteezy</a>
+    <a href="https://www.youtube.com/watch?si=XMhWMto6sPTd5Z7L&v=_pN_e1MlBR8&feature=youtu.be">Music: Youtube</a>
+    <a href="https://www.nga.gov/artworks/2582-louis-xvi-and-marie-antoinette">Footer Image: NGA</a>
+    <a href="https://rodama1789.blogspot.com/2014/09/more-tussaud-wax-heads.html">Marie Antoinette's head:rodama1789 blog</a>
+    <a href="https://stock.adobe.com/au/search?filters%5Bcontent_type%3Aphoto%5D=1&filters%5Bcontent_type%3Aillustration%5D=1&filters%5Bcontent_type%3Azip_vector%5D=1&filters%5Bcontent_type%3Avideo%5D=1&filters%5Bcontent_type%3Atemplate%5D=1&filters%5Bcontent_type%3A3d%5D=1&filters%5Bfetch_excluded_assets%5D=1&filters%5Binclude_stock_enterprise%5D=1&filters%5Bcontent_type%3Aimage%5D=1&order=relevance&k=cherry&search_page=1&search_type=usertyped&acp=&aco=cherry&get_facets=0&asset_id=1558647336">Cake and cherry: Adobe Stock Images</a></div>
+    <div class="drapes"></div>
 </footer>
 
 </body>
