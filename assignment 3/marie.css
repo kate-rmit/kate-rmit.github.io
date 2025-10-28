@@ -98,7 +98,7 @@ a{
   color: black;
   transform: translate(53rem, 21rem);
   /* font-family: Monsieur La Doulaise; */
-  font-size: 30px;
+  font-size: 2rem;
 }
 
 .section_container {
@@ -136,7 +136,7 @@ transform: translate(25rem);
 .sharpGui{
     top: 0;
     width: 60rem;
-    transform: translate(20rem, -60rem);
+    transform: translate( -3rem, -60rem);
  position: absolute;
    display: flex;
     justify-self: center;
